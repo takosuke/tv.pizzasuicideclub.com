@@ -2,23 +2,125 @@ body {
   font-size:62.5%;      
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #333;
-  line-height: 26px; font-size: 16px;
-  background-image: url('../img/bg.jpg');
-
+  line-height:1.2;
+  /*background-image: url('../img/bg.jpg');*/
+}
+h1 {
+  font-size: 3em;
+  color: #5e594d;
+  text-transform: uppercase;
+  line-height: 1;
+}
+h2 {
+  font-size: 2em;
+  font-weight:bold;
+}
+h3 {
+  font-size: 1.8em;
+  background-color:yellow;
+  padding:0.5em;
+}
+a {
+  text-decoration:none;
 }
 
 #main-wrapper{
+  width:100%;
+  font-size:1.3em;
+  margin:auto;
+}
 
+header {
+  height:3em;
+}
+header h1 {
+  float:left;
+  background-color:red;
+}
+#about-info {
+  float:left;
+  width:70%;
+  margin-left:2em;
+  padding:0.3em;
+}
+#about-info a {
+  font-weight:bold;
+  color:green;
+  font-size:1.4em;
+}
+
+#channel-wrapper {
+  width:100%;
+  margin:auto;
+
+}
+#channel-main-row {
+}
+
+#ytapiplayer {
+  width:720px;
+  height:720px;
+  float:left;
+  border:1px solid black;
+}
+
+#myytplayer {
+  width:720px;
+  float:left;
+  border:1px solid black;
+}
+#video-sidebar {
+  float:left;
+  border:1px solid black;
+  width:calc(100% - 780px);
+  padding:1em;
+  margin-left:0.3em;
+}
+#video-list-container {
+}
+
+#video-list-container a {
+}
+
+#video-page-navigation a {
+  font-size:1.2em;
+  background-color:green;
+  color:#ffffff;
+}
+#video-info p {
+  padding-top:1em;
+  padding-bottom:1.4em;
+}
+
+#playlist-container {
+  background-color:#ffffff;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  height:4em;
+  background-color:#C2C2D6;
+}
+#playlists a {
+  font-size:1.5em;
+}
+
+#psc-link {
+  float:right;
+  background-color:yellow;
+  font-size:3em;
 }
 
 #stream-wrapper {
-  width:720px;
-  float:left;
+  width:320px;
+  padding:1em;
+  border:1px black solid;
+  margin-bottom:4em;
 }
-
-#stream-wrapper p{
-  background-color:white;
+#livestream {
+  width:320px;
+  height:240px;
+  
 }
 
 #chat {
@@ -35,57 +137,21 @@ form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 
 #messages li:nth-child(odd) { background: rgba(152, 255, 44, 0.4); }
 
 
-#livestream {
-  margin:auto;
+/* CLEARFIX BY Nicolas Gallagher */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
 }
-#channel-wrapper {
-  width:720px;
-  background-color:white;
-  margin:auto;
-
+ 
+.clearfix:after {
+  clear: both;
 }
-
-
-#content {
-  width:100%;
-  margin:auto;
-  background-color:white;
-
+ 
+.clearfix {
+  *zoom: 1;
 }
 
-
-
-h1 {
-  word-spacing: 3px;
-  font-size: 28px;
-  color: #5e594d;
-  background-color:white;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-ul {
-  background: transparent;
-}
-  
-a { 
-  text-decoration: none;  
-  display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#fff;
-  font-size: 28px;
-  padding: 21px;
-  background-color: #000;
-  margin-bottom: 2px;
-  width:520px;
-  cursor: pointer;
-}
-
-  
-
-  a:hover { 
-    background-color: rgba(38,236,220,0.6); color: #fff;
-}
 
 @media only screen and (max-width: 640px) {
 
