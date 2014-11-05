@@ -1,9 +1,35 @@
 {
-  "name": "socket-chat-example",
+  "name": "pizzasuicidechat",
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
     "express": "4.3.1",
     "socket.io": "1.0.2"
-  }
+  },
+  "devDependencies": {
+    "chai": "~1.9.2",
+    "mocha": "~2.0.1"
+  },
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takosuke/pizzasuicidechat"
+  },
+  "keywords": [
+    "chat",
+    "pizza"
+  ],
+  "author": "takosuke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takosuke/pizzasuicidechat/issues"
+  },
+  "homepage": "https://github.com/takosuke/pizzasuicidechat"
 }
