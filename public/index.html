@@ -92,6 +92,43 @@
       </div><!--channel-wrapper-->
     </div><!-- main-wrapper -->
 
+
+    <div id="chat">
+      <div class="alert alert-danger" id="errors"></div><!-- end errors -->
+      <div id="login-screen">
+        <p>Please enter your name below and click 'Join' or hit the 'Enter' key.</p>
+          <form class="form-inline" id="nameForm">
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Your name" id="name">
+            </div>
+            <input type="submit" name="join" id="join" value="Join" class="btn btn-primary btn-lg">
+          </form>
+      </div><!-- end login-screen -->
+      <div class="row" id="main-chat-screen">
+        <div class="col-md-3">
+          <ul id="people" class="list-group"></ul>
+        </div>
+        <div class="col-md-6">
+          <div id="conversation">
+            <ul id="msgs" class="list-unstyled"></ul>
+          </div>
+          <form id="chatForm" class="form-inline">
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Your message" id="msg">
+            </div>
+            <input type="submit" name="send" id="send" value="Send" class="btn btn-success btn-lg">
+
+          </form>
+        </div>
+         <div class="col-md-2">
+          <ul class="list-unstyled" id="updates"></ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
       <!--<div id="chat">
         <h1>Pizza Suicide Chat</h1>
         <ul id="messages"></ul>
@@ -112,6 +149,9 @@
         $('#messages').append($('<li>').text(msg));
       });
   </script>-->
+  <script src="components/jquery/dist/jquery.js"></script>
+  <script src="/socket.io/socket.io.js"></script>  
+  <script src="js/client.js"></script>
   <script src="js/playlistLoader.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
   </body>

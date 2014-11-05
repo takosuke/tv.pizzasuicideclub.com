@@ -3,8 +3,14 @@
   "version": "0.0.1",
   "description": "The Pizza Suicide Chat",
   "dependencies": {
+    "ejs": "~0.8.5",
     "express": "4.3.1",
-    "socket.io": "1.0.2"
+    "socket.io": "1.0.2",
+    "node-uuid": "~1.4.1",
+    "nodemon": "~1.0.13",
+    "shrinkwrap": "~0.0.3",
+    "underscore": "~1.5.2",
+    "bower": "~1.2.8"
   },
   "devDependencies": {
     "chai": "~1.9.2",
@@ -16,11 +22,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/takosuke/pizzasuicidechat"
+    "url": "https://github.com/takosuke/tv.pizzasuicideclub.com/"
   },
   "keywords": [
     "chat",
@@ -29,7 +37,7 @@
   "author": "takosuke",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/takosuke/pizzasuicidechat/issues"
+    "url": "https://github.com/takosuke/tv.pizzasuicideclub.com/issues"
   },
-  "homepage": "https://github.com/takosuke/tv.pizzasuicideclub.com"
+  "homepage": "http://www.tv.pizzasuicideclub.com"
 }
