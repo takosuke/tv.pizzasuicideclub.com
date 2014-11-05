@@ -1,7 +1,7 @@
 {
   "name": "pizzasuicidechat",
   "version": "0.0.1",
-  "description": "The Pizza Suicide Chat",
+  "description": "my first socket.io app",
   "dependencies": {
     "express": "4.3.1",
     "socket.io": "1.0.2"
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/takosuke/pizzasuicidechat/issues"
   },
-  "homepage": "https://github.com/takosuke/tv.pizzasuicideclub.com"
+  "homepage": "https://github.com/takosuke/pizzasuicidechat"
 }
