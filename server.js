@@ -6,18 +6,17 @@ var express = require('express')
 , Room = require('./room.js')
 , _ = require('underscore')._;
 
-app.configure(function() {
-  app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000);
-    app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.static(__dirname + '/public'));
-  app.use('/components', express.static(__dirname + '/components'));
-  app.use('/js', express.static(__dirname + '/js'));
-  app.use('/icons', express.static(__dirname + '/icons'));
-  app.set('views', __dirname + '/views');
+console.log("where do the logs gooo");
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000);
+  app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.static(__dirname + '/public'));
+app.use('/components', express.static(__dirname + '/components'));
+app.use('/js', express.static(__dirname + '/js'));
+app.use('/icons', express.static(__dirname + '/icons'));
+app.set('views', __dirname + '/views');
   app.engine('html', require('ejs').renderFile);
-});
 
 app.get('/', function(req, res) {
   res.render('index.html');
@@ -27,7 +26,7 @@ server.listen(app.get('port'), app.get('ipaddr'), function(){
   console.log('Express server listening on  IP: ' + app.get('ipaddr') + ' and port ' + app.get('port'));
 });
 
-io.set("log level", 1);
+//io.set("log level", 1);
 var default_room_id = uuid.v4();
 var default_room = new Room("Pizza Suicide Tv Chat", default_room_id);
 var people = {};
@@ -78,7 +77,11 @@ function purge(s, action) {
   }
 }
 
+io.on('connection', function(socket){
+  console.log("somebody connected apparently");
+});
 io.sockets.on("connection", function (socket) {
+  console.log("somebody connected");
   socket.on("joinserver", function(name, device) {
     var exists = false;
     inRoomID = default_room_id;
