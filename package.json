@@ -4,8 +4,8 @@
   "description": "The Pizza Suicide Chat",
   "dependencies": {
     "ejs": "~0.8.5",
-    "express": "4.3.1",
-    "socket.io": "1.0.2",
+    "express": "~3.4.8",
+    "socket.io": "~0.9.16",
     "node-uuid": "~1.4.1",
     "nodemon": "~1.0.13",
     "shrinkwrap": "~0.0.3",
