@@ -23,6 +23,15 @@
 
   </head>
   <body>
+    <div id="login-screen">
+      <p>Please enter your name below and click 'Join' or hit the 'Enter' key.</p>
+        <form id="nameForm">
+          <div>
+            <input type="text" placeholder="Your name" id="name">
+          </div>
+          <input type="submit" name="join" id="join" value="Join">
+        </form>
+    </div><!-- end login-screen -->
     <div id="main-wrapper">
       <header class="clearfix">
         <h1>
@@ -92,66 +101,39 @@
       </div><!--channel-wrapper-->
     </div><!-- main-wrapper -->
 
+    <div id="login-screen">
+      <h1>WELCOME TO THE PIZZA SUICIDE TV</h1>
+      <p>Please enter your chat nickname below and click 'Join' or hit the 'Enter' key.
+      <br>
+      </p>
+        <form id="nameForm">
+          <div>
+            <input type="text" placeholder="Your name" id="name">
+          </div>
+          <input type="submit" name="join" id="join" value="Join">
+        </form>
+    </div><!-- end login-screen -->
+
 
     <div id="chat">
-      <div class="alert alert-danger" id="errors"></div><!-- end errors -->
-      <div id="login-screen">
-        <p>Please enter your name below and click 'Join' or hit the 'Enter' key.</p>
-          <form class="form-inline" id="nameForm">
-            <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Your name" id="name">
-            </div>
-            <input type="submit" name="join" id="join" value="Join" class="btn btn-primary btn-lg">
-          </form>
-      </div><!-- end login-screen -->
-      <div class="row" id="main-chat-screen">
-        <div class="col-md-3">
-          <ul id="people" class="list-group"></ul>
-        </div>
-        <div class="col-md-6">
-          <div id="conversation">
-            <ul id="msgs" class="list-unstyled"></ul>
-          </div>
-          <form id="chatForm" class="form-inline">
-            <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Your message" id="msg">
-            </div>
-            <input type="submit" name="send" id="send" value="Send" class="btn btn-success btn-lg">
+      <div id="errors"></div><!-- end errors -->
 
-          </form>
+      <div id="main-chat-screen">
+        <div>
+          <ul id="people"></ul>
         </div>
-         <div class="col-md-2">
-          <ul class="list-unstyled" id="updates"></ul>
-        </div>
+        <div id="conversation">
+          <ul id="msgs"></ul>
+        </div><!-- end conversation -->
+        <form id="chatForm">
+          <input type="text" placeholder="Your message" id="msg">
+          <input type="submit" name="send" id="send" value="Send">
+        </form><!-- end chatForm  -->
       </div>
-    </div>
-
-
-
-
-      <!--<div id="chat">
-        <h1>Pizza Suicide Chat</h1>
-        <ul id="messages"></ul>
-        <form action="">
-          <input id="m" autocomplete="off" /><button>Send</button>
-        </form>
-      </div>--><!-- end chat -->
-    
-  
-  <!--<script>
-      var socket = io();
-      $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
-        return false;
-      });
-      socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(msg));
-      });
-  </script>-->
+    </div><!-- end chat -->
   <script src="components/jquery/dist/jquery.js"></script>
   <script src="/socket.io/socket.io.js"></script>  
-  <script src="js/client.js"></script>
+  <script src="js/chatclient.js"></script>
   <script src="js/playlistLoader.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
   </body>

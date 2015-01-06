@@ -3,20 +3,18 @@
   "version": "0.0.1",
   "description": "The Pizza Suicide Chat",
   "dependencies": {
-    "ejs": "~0.8.5",
-    "express": "~3.4.8",
-    "socket.io": "~0.9.16",
-    "node-uuid": "~1.4.1",
-    "nodemon": "~1.0.13",
-    "shrinkwrap": "~0.0.3",
-    "underscore": "~1.5.2",
+    "express": "~4.10.6",
+    "socket.io": "~1.2.1",
+    "underscore": "~1.7.0",
+    "chai": "^1.10.0",
+    "mongodb" : "~2.0",
     "bower": "~1.2.8"
   },
   "devDependencies": {
     "chai": "~1.9.2",
     "mocha": "~2.0.1"
   },
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "example": "examples",
     "test": "test"
