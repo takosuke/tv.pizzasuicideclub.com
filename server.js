@@ -1,3 +1,4 @@
+var config = require('./config');
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
@@ -7,14 +8,28 @@ var mongo = require("mongodb").MongoClient;
 var _ = require('underscore')._;
 var assert = require('assert');
 
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000);
-  app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
-app.use(express.static(__dirname + '/public'));
-app.get('/', function(req, res) {
-  res.render('index.html');
-});
 
 var mongourl = 'mongodb://localhost:27017/chat';
+var people = {};
+var sockets = [];
+
+//express.js configuration stuff
+//app.set('view engine', 'html');
+//app.engine('html', require('ejs').renderFile);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || config.port);
+app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+app.get('/', function(req, res) {
+  if (config.onAir == true) {
+    res.sendFile(__dirname + '/views/onAir.html');
+  } else {
+    res.sendFile(__dirname + '/views/index.html');
+  }
+});
+app.get('/playlists', function(req, res) {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
+app.use(express.static(__dirname + '/public'));  
 
 
 //functions
@@ -51,9 +66,6 @@ mongo.connect(mongourl, function(err, db) {
     });
   });
 });
-
-var people = {};
-var sockets = [];
 
 //stuff to do with socket connection
 io.on('connection', function (socket){

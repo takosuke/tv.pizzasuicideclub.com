@@ -1,0 +1,200 @@
+
+/* GENERAL CRAP */
+
+body {
+  font-size:62.5%;      
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height:1.2;
+  /*background-image: url('../img/bg.jpg');*/
+}
+h1 {
+  font-size: 3em;
+  color: #5e594d;
+  text-transform: uppercase;
+  line-height: 1;
+}
+h2 {
+  font-size: 2em;
+  font-weight:bold;
+}
+h3 {
+  font-size: 1.8em;
+  background-color:yellow;
+  padding:0.5em;
+}
+a {
+  text-decoration:none;
+}
+
+/* CLEARFIX BY Nicolas Gallagher */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  *zoom: 1;
+}
+
+/* MAIN STRUCTURE */
+#main-wrapper{
+  width:100%;
+  font-size:1.3em;
+  margin:auto;
+  z-index:0;
+}
+
+header {
+  height:3em;
+}
+header h1 {
+  float:left;
+  background-color:red;
+}
+#about-info {
+  float:left;
+  width:70%;
+  margin-left:2em;
+  padding:0.3em;
+}
+#about-info a {
+  font-weight:bold;
+  color:green;
+  font-size:1.4em;
+}
+
+
+/* TV CHANNEL */
+#channel-wrapper {
+  width:100%;
+  margin:auto;
+
+}
+#channel-main-row {
+}
+
+
+
+
+
+
+#video-page-navigation a {
+  font-size:1.2em;
+  background-color:green;
+  color:#ffffff;
+}
+
+
+
+#psc-link {
+  float:right;
+  background-color:yellow;
+  font-size:3em;
+}
+
+#stream-wrapper {
+  width:720px;
+  padding:1em;
+  margin-bottom:4em;
+}
+#livestream {
+  width:720px;
+  height:576px;
+  
+}
+
+/* CHAT */
+
+
+#login-screen {
+
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  margin:auto;
+  margin-top:0px;
+  background-color:rgba(200, 10,30, 0.9);
+  z-index:14;  
+  font-size:25px;
+  border:35px #C6E7B0 solid;
+  text-align:center;
+  padding-top:90px;
+}
+
+#chat {
+  width:40em;
+  height:500px; 
+  position:absolute;
+  right:0px;
+  bottom:0px;
+  z-index:100;
+  border:1px black solid;
+  background-color:#99D461;
+}
+
+#main-chat-screen {
+
+}
+#people {
+  width:100px;
+  float:left;
+  margin-right:5px;
+  background-color:#545454;
+  color:white;
+  overflow:scroll;
+}
+.count {
+  color:#9A9E98;
+}
+
+#chat form { 
+  bottom:0px;
+  position:absolute;
+  bottom:0px;
+
+  width:100%;
+}
+
+#msg {
+  width:90%;
+  margin:auto;
+  border:0;
+  background-color:#C5C7C3;
+  padding:0px;
+  height:2.5em;
+  float:left;
+}
+
+
+#send { 
+  width: 10%;
+  height:2.5em;
+  background: rgb(130, 224, 255);
+  border: none;
+  padding: 0px;
+  float:left;
+}
+
+
+#msgs {
+  height:470px;
+  overflow-y:auto;
+}
+
+.update {
+  color:white;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+}
