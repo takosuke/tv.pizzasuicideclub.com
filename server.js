@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
   if (config.onAir == true) {
     res.render('onAir', { tagline : config.programText });
   } else {
-    res.render('index', { tagline : config.nextShow );
+    res.render('index', { tagline : config.nextShow });
   }
 });
 app.get('/playlists', function(req, res) {
