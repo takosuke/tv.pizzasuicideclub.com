@@ -6,6 +6,9 @@ swfobject.embedSWF("http://www.youtube.com/v/" + videoId + "?enablejsapi=1&playe
                          "ytapiplayer", "720", "576", "8", null, null, params, atts);
 var apiKey = "AIzaSyBjCSouNb1proX81bkScaPyXMqJZP1lOgM";
 
+$('#next-button, #prev-button').css('cursor', 'pointer');
+
+
 
 function googleApiClientReady(){
   console.log('loading api');
@@ -89,12 +92,16 @@ function displayVideoInformation(videoId) {
   request.execute(function(response) {
     var title = response.items[0].snippet.title;
     var description = response.items[0].snippet.description.replace(/\n/g,"<br>");
+    //maybe better to put this crap in a template or something
     var infoHTML = "Currently playing:<h3>" + title + "</h3> \
-                    <p>" + description + "</p>"
+                    <p id='description'>" + description + "</p>";
     $("#video-info").html(infoHTML);
-    
   });
 }
+
+
+  
+
   
 
 function listPlaylists(item){

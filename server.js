@@ -14,20 +14,24 @@ var people = {};
 var sockets = [];
 
 //express.js configuration stuff
-//app.set('view engine', 'html');
-//app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || config.port);
 app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.get('/', function(req, res) {
   if (config.onAir == true) {
-    res.sendFile(__dirname + '/views/onAir.html');
+    res.render('onAir', { tagline : config.programText });
   } else {
-    res.sendFile(__dirname + '/views/index.html');
+    res.render('index', { tagline : config.nextShow );
   }
 });
 app.get('/playlists', function(req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+  res.render('index');
 });
+app.get('/history', function(req, res) {
+  res.render('history')
+});
+
 
 app.use(express.static(__dirname + '/public'));  
 
@@ -55,6 +59,16 @@ mongo.connect(mongourl, function(err, db) {
       if (err) throw err;
       socket.emit('history', res);
     })
+    
+    socket.on('fullhistoryquery', function() {
+      
+      col.find().sort({_id:1}).toArray(function (err, res) {
+        if (err) throw err;
+        console.log(res);
+        socket.emit('history', res);
+      });
+    });
+    
     
     socket.on('send', function(data){
       if (typeof people[socket.id] !== "undefined") {

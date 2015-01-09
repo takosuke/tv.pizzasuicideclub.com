@@ -101,8 +101,6 @@ header h1 {
 #video-list-container {
 }
 
-#video-list-container a {
-}
 
 #video-page-navigation a {
   font-size:1.2em;
@@ -155,6 +153,7 @@ header h1 {
   height:300px;
   margin:auto;
   margin-top:50px;
+  margin-bottom:200px;
   background-color:#D1B0E7;
   z-index:14;  
   font-size:25px;
@@ -164,37 +163,48 @@ header h1 {
 }
 
 #chat {
-  width:35em;
-  height:20em; 
+  width:30em;
   position:absolute;
   right:0px;
-  bottom:0px;
+  bottom:4em;
   z-index:100;
-  border:1px black solid;
   background-color:#99D461;
 }
 
-#main-chat-screen {
+#chat-controls {
+  text-align:right;
+  border-bottom:1px white dotted;
+}
 
+#chat-controls-sound {
+  background-color:red;
+  color:white;
+}
+#chat-controls-openclose {
+  background-color:black;
+  color:white;
+}
+#chat-controls-history {
+  background-color:green;
+  color:white;
+}
+
+#main-chat-screen {
+  height:20em; 
 }
 #people {
-  width:60px;
+  width:80px;
   float:left;
   background-color:#545454;
   color:white;
   overflow:scroll;
+  margin-right:10px;
 }
 .count {
   color:#9A9E98;
 }
 
-#chat form { 
-  bottom:0px;
-  position:absolute;
-  bottom:0px;
 
-  width:100%;
-}
 
 #msg {
   width:90%;
@@ -218,6 +228,15 @@ header h1 {
 
 
 #msgs {
+}
+
+.history-msgs {
+  list-style-type:none;
+  padding-left: 50px;
+  font-size: 24px;
+}
+
+.main-msgs { 
   height:17em;
   overflow-y:auto;
 }
