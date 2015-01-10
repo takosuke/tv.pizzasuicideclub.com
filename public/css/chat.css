@@ -63,17 +63,17 @@ CHAT .playlist-page
 
 
 .playlist-page #login-screen {
-  width:60%;
-  height:300px;
+  position:absolute;
+  right:0px;
+  bottom:2em;
+  width:30em;
+  height:17em;
   margin:auto;
-  margin-top:50px;
-  margin-bottom:200px;
   background-color:#D1B0E7;
-  z-index:14;  
-  font-size:25px;
-  border:35px #C6E7B0 solid;
+  z-index:140;  
+  font-size:12px;
+  border:5px #C6E7B0 solid;
   text-align:center;
-  padding-top:90px;
 }
 
 .playlist-page #chat {
@@ -132,6 +132,10 @@ CHAT .playlist-page
   z-index:100;
   background-color:#99D461;
   font-size:1.2em;
+}
+
+.onair-page #chat-controls-openclose {
+  display:none;
 }
 
 .onair-page #main-chat-screen {
