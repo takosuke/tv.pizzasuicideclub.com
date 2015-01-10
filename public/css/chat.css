@@ -1,0 +1,163 @@
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////////
+CHAT GLOBALS 
+////////////////////////////////////////////////////////////////////////////////////////
+
+*/
+
+#people {
+  width:80px;
+  float:left;
+  background-color:#545454;
+  color:white;
+  overflow:scroll;
+  margin-right:10px;
+}
+
+.count {
+  color:#9A9E98;
+}
+
+#chat-controls {
+  text-align:right;
+  height:25px;
+  border-bottom:1px white dotted;
+}
+
+#chat-controls-sound {
+  background-color:red;
+  color:white;
+}
+
+#chat-controls-openclose {
+  background-color:black;
+  color:white;
+}
+
+#send { 
+  width: 10%;
+  height:2.5em;
+  background: rgb(130, 224, 255);
+  border: none;
+  padding: 0px;
+  float:left;
+}
+
+.history-msgs {
+  list-style-type:none;
+  padding-left: 50px;
+  font-size: 24px;
+}
+
+.update {
+  color:white;
+}
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////////
+CHAT .playlist-page 
+////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+.playlist-page #login-screen {
+  width:60%;
+  height:300px;
+  margin:auto;
+  margin-top:50px;
+  margin-bottom:200px;
+  background-color:#D1B0E7;
+  z-index:14;  
+  font-size:25px;
+  border:35px #C6E7B0 solid;
+  text-align:center;
+  padding-top:90px;
+}
+
+.playlist-page #chat {
+  width:30em;
+  position:absolute;
+  right:0px;
+  bottom:2em;
+  z-index:100;
+  background-color:#99D461;
+}
+
+.playlist-page #main-chat-screen {
+  height:20em; 
+}
+
+.playlist-page #msg {
+  width:90%;
+  margin:auto;
+  border:0;
+  background-color:#C5C7C3;
+  padding:0px;
+  height:2.5em;
+  float:left;
+}
+
+.playlist-page #msgs {
+}
+
+.playlist-page .main-msgs { 
+  height:17em;
+  overflow-y:auto;
+}
+
+
+/*
+////////////////////////////////////////////////////////////////////////////////////////
+ CHAT ON AIR
+////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+.onair-page #login-screen  {
+  margin-left:680px;
+  height:480px;
+  background-color:#D1B0E7;
+  font-size:25px;
+  border:35px #C6E7B0 solid;
+  text-align:center;
+
+}
+
+.onair-page #chat {
+  margin-left:680px;
+  margin-right:20px;
+  height:550px; 
+  z-index:100;
+  background-color:#99D461;
+  font-size:1.2em;
+}
+
+.onair-page #main-chat-screen {
+
+}
+.onair-page #msgs {
+  height:519px;
+  border-left:1px white dotted;
+  overflow-y:auto;
+  padding-left:10px;
+}
+
+
+.onair-page  #chat form { 
+  bottom:0px;
+  width:100%;
+}
+
+.onair-page #msg {
+  width:90%;
+  margin:auto;
+  border:0;
+  background-color:#C5C7C3;
+  padding:0px;
+  height:2.5em;
+  float:left;
+}
+
+

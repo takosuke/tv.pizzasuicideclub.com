@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="onair-page">
   <head>
     <% include partials/head.html %>
-    <link rel="stylesheet" type="text/css" href="css/onair_style.css" media="screen" />
   </head>
   <body>
 
-    <% include partials/login.html %>
+    
 
     <div id="main-wrapper">
       <% include partials/header.html %>
       <% include partials/livestream.html %>
-    </div><!-- main-wrapper -->
-      
+      <% include partials/login.html %>
       <% include partials/chat.html %>
+    </div><!-- main-wrapper -->
 
   <script src="components/jquery/dist/jquery.js"></script>
   <script src="/socket.io/socket.io.js"></script>  

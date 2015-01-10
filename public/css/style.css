@@ -1,5 +1,10 @@
 
-/* GENERAL CRAP */
+/*
+////////////////////////////////////////////////////////////////////////////////////////
+GENERAL CRAP 
+////////////////////////////////////////////////////////////////////////////////////////
+*/
+
 
 body {
   font-size:62.5%;      
@@ -21,13 +26,18 @@ h2 {
 h3 {
   font-size: 1.8em;
   background-color:yellow;
-  padding:0.5em;
 }
 a {
   text-decoration:none;
 }
 
-/* CLEARFIX BY Nicolas Gallagher */
+/* 
+////////////////////////////////////////////////////////////////////////////////////////
+CLEARFIX BY Nicolas Gallagher 
+////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -42,7 +52,13 @@ a {
   *zoom: 1;
 }
 
-/* MAIN STRUCTURE */
+/* 
+////////////////////////////////////////////////////////////////////////////////////////
+MAIN STRUCTURE 
+////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
 #main-wrapper{
   width:100%;
   font-size:1.3em;
@@ -53,48 +69,52 @@ a {
 header {
   height:3em;
 }
+
 header h1 {
   float:left;
   background-color:red;
 }
+
 #about-info {
   float:left;
   width:70%;
   margin-left:2em;
   padding:0.3em;
 }
+
 #about-info a {
   font-weight:bold;
-  color:green;
+  color:red;
   font-size:1.4em;
 }
 
 
-/* TV CHANNEL */
+/* 
+////////////////////////////////////////////////////////////////////////////////////////
+TV CHANNEL 
+////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
 #channel-wrapper {
-  width:100%;
+  width:98%;
   margin:auto;
 
-}
-#channel-main-row {
 }
 
 #ytapiplayer {
   width:720px;
-  height:720px;
-  float:left;
-  border:1px solid black;
+  height:576px;
 }
 
 #myytplayer {
-  width:720px;
   float:left;
-  border:1px solid black;
 }
+
 #video-sidebar {
   float:left;
-  border:1px solid black;
-  width:calc(100% - 780px);
+  background-color:#B0F0F5;
+  width:calc(100% - 800px);
   padding:1em;
   margin-left:0.3em;
 }
@@ -104,12 +124,16 @@ header h1 {
 
 #video-page-navigation a {
   font-size:1.2em;
-  background-color:green;
+  background-color:#F5B5B0;
   color:#ffffff;
 }
+
+#video-info {
+  padding-top:1em;
+}
+
 #video-info p {
   padding-top:1em;
-  padding-bottom:1.4em;
 }
 
 #playlist-container {
@@ -118,132 +142,28 @@ header h1 {
   bottom:0px;
   left:0px;
   right:0px;
-  height:4em;
+  height:2em;
   background-color:#C2C2D6;
 }
+
 #playlists a {
   font-size:1.5em;
 }
 
-#psc-link {
-  float:right;
-  background-color:yellow;
-  font-size:3em;
-}
 
 #stream-wrapper {
-  width:320px;
+  width:640px;
   padding:1em;
-  border:1px black solid;
-  margin-bottom:4em;
+  background-color:#FBDBFF;
+  float:left;
 }
+
 #livestream {
-  width:320px;
-  height:240px;
-  
+  width:720px;
+  height:576px;
 }
 
 /* CHAT */
-
-/* CHAT */
-
-
-#login-screen {
-  width:60%;
-  height:300px;
-  margin:auto;
-  margin-top:50px;
-  margin-bottom:200px;
-  background-color:#D1B0E7;
-  z-index:14;  
-  font-size:25px;
-  border:35px #C6E7B0 solid;
-  text-align:center;
-  padding-top:90px;
-}
-
-#chat {
-  width:30em;
-  position:absolute;
-  right:0px;
-  bottom:4em;
-  z-index:100;
-  background-color:#99D461;
-}
-
-#chat-controls {
-  text-align:right;
-  border-bottom:1px white dotted;
-}
-
-#chat-controls-sound {
-  background-color:red;
-  color:white;
-}
-#chat-controls-openclose {
-  background-color:black;
-  color:white;
-}
-#chat-controls-history {
-  background-color:green;
-  color:white;
-}
-
-#main-chat-screen {
-  height:20em; 
-}
-#people {
-  width:80px;
-  float:left;
-  background-color:#545454;
-  color:white;
-  overflow:scroll;
-  margin-right:10px;
-}
-.count {
-  color:#9A9E98;
-}
-
-
-
-#msg {
-  width:90%;
-  margin:auto;
-  border:0;
-  background-color:#C5C7C3;
-  padding:0px;
-  height:2.5em;
-  float:left;
-}
-
-
-#send { 
-  width: 10%;
-  height:2.5em;
-  background: rgb(130, 224, 255);
-  border: none;
-  padding: 0px;
-  float:left;
-}
-
-
-#msgs {
-}
-
-.history-msgs {
-  list-style-type:none;
-  padding-left: 50px;
-  font-size: 24px;
-}
-
-.main-msgs { 
-  height:17em;
-  overflow-y:auto;
-}
-
-.update {
-  color:white;
-}
 
 
 

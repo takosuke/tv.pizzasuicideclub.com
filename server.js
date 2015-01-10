@@ -26,12 +26,14 @@ app.get('/', function(req, res) {
   }
 });
 app.get('/playlists', function(req, res) {
-  res.render('index');
+  res.render('index', { tagline : config.nextShow });
 });
 app.get('/history', function(req, res) {
   res.render('history')
 });
-
+app.get('/onair', function(req, res) {
+  res.render('onAir', { tagline : config.programText });
+});
 
 app.use(express.static(__dirname + '/public'));  
 

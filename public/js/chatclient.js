@@ -37,16 +37,11 @@ $(document).ready(function(){
   $("#chat").hide();
   $("#errors").hide();
   $("#name").focus();
-  $("#join").attr('disabled', 'disabled');
-  
-  if ($("#name").val() === "") {
-    $("#join").attr('disabled', 'disabled');
-  }
-  
+
   //enter screen
   $("#nameForm").submit(function(){
     var name = $("#name").val();
-    if (name === "" || name.length < 2) {
+    if (name === "") {
       $("#errors").empty();
       $("#errors").append("please enter a name please");
       $("#errors").show();
@@ -58,17 +53,7 @@ $(document).ready(function(){
     }
   });
   
-  $("#name").keypress(function(e){
-    var name = $("#name").val();
-    if(name.length < 2) {
-      $("#join").attr('disabled', 'disabled'); 
-    } else {
-      $("#errors").empty();
-      $("#errors").hide();
-      $("#join").removeAttr('disabled');
-    }
-  });
-  
+
   //main chat screen
   $("#chatForm").submit(function(){
     var msg = $("#msg").val();
