@@ -66,10 +66,10 @@ $(document).ready(function(){
   $("#chat-controls-sound").click(function(){
     if (chatVol != 0) {
       chatVol = 0;
-      $("#chat-controls-sound").html("SOUND ON");
+      $("#chat-controls-sound").html("TURN SOUND ON");
     } else {
       chatVol = 0.2;
-      $("#chat-controls-sound").html("SOUND OFF");
+      $("#chat-controls-sound").html("TURN SOUND OFF");
     }
     
   });

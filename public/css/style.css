@@ -7,6 +7,9 @@ GENERAL CRAP
 
 
 body {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
   font-size:62.5%;      
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -152,15 +155,18 @@ TV CHANNEL
 
 
 #stream-wrapper {
-  width:640px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  width:660px;
   padding:1em;
   background-color:#FBDBFF;
   float:left;
 }
 
 #livestream {
-  width:720px;
-  height:576px;
+  width:640px;
+  height:480px;
 }
 
 /* CHAT */
