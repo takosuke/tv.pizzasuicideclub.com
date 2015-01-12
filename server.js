@@ -36,7 +36,7 @@ app.get('/onair', function(req, res) {
 });
 
 app.use(express.static(__dirname + '/public'));  
-
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 //functions
 function purge(socket, action) {

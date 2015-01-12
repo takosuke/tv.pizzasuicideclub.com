@@ -11,7 +11,28 @@
     <% include partials/header.html %>
     <% include partials/channel.html %>
     </div><!-- main-wrapper -->
-    
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('#clock').countdown('2015/01/17 21:00:00')
+    .on('update.countdown', function(event) {
+      var format = '%H:%M:%S left';
+      if(event.offset.days > 0) {
+        format = '%-d day%!d ' + format;
+       }
+      if(event.offset.weeks > 0) {
+        format = '%-w week%!w ' + format;
+      }
+      $(this).html(event.strftime(format));
+    })
+    .on('finish.countdown', function(event) {
+     $(this).html('We have started!')
+       .parent().addClass('disabled')
+    });
+  });
+  </script>
 
   <script src="/socket.io/socket.io.js"></script>  
   <script src="js/timbre.dev.js"></script>

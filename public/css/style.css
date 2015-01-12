@@ -169,7 +169,12 @@ TV CHANNEL
   height:480px;
 }
 
-/* CHAT */
+/* CLOCK */
+
+#clock {
+  font-size:3em;
+  background-color:yellow;
+}
 
 
 
