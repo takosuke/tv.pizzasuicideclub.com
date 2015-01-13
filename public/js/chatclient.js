@@ -103,7 +103,6 @@ $(document).ready(function(){
     $("#msgs").append("<li>" + msg + "</li>");
     freq = Math.floor(Math.random() * 300) + 130;
     r = Math.floor(Math.random() * 500) + 100;
-    console.log(r);
     T('perc', {r:r},T('sin', {mul : chatVol, freq : freq})).on('ended', function(){
      this.pause();
     }).bang().play();
