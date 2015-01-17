@@ -164,4 +164,53 @@ CHAT .playlist-page
   float:left;
 }
 
+/*
+////////////////////////////////////////////////////////////////////////////////////////
+ CHAT standalone
+////////////////////////////////////////////////////////////////////////////////////////
+*/
 
+.standalone-chat-page #login-screen  {
+  height:480px;
+  background-color:#D1B0E7;
+  font-size:25px;
+  border:35px #C6E7B0 solid;
+  text-align:center;
+
+}
+
+.standalone-chat-page #chat {
+  height:550px; 
+  z-index:100;
+  background-color:#99D461;
+  font-size:1.2em;
+  width:90%;
+}
+
+.standalone-chat-page #chat-controls-openclose {
+  display:none;
+}
+
+
+.standalone-chat-page #msgs {
+  height:519px;
+  border-left:1px white dotted;
+  overflow-y:auto;
+  padding-left:10px;
+}
+
+
+.standalone-chat-page  #chat form { 
+  bottom:0px;
+  width:100%;
+}
+
+.standalone-chat-page #msg {
+  width:90%;
+  margin:auto;
+  border:0;
+  background-color:#C5C7C3;
+  padding:0px;
+  height:3.5em;
+  float:left;
+}

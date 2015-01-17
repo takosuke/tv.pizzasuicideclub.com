@@ -34,6 +34,9 @@ app.get('/history', function(req, res) {
 app.get('/onair', function(req, res) {
   res.render('onAir', { tagline : config.programText });
 });
+app.get('/chat', function(req, res) {
+  res.render('chatIndex');
+});
 
 app.use(express.static(__dirname + '/public'));  
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
@@ -57,10 +60,13 @@ mongo.connect(mongourl, function(err, db) {
   console.log("Connected to mongoserver");
   io.on("connection", function(socket) {
     var col = db.collection('ChatHistory');
-    col.find().limit(100).sort({_id:1}).toArray(function (err, res) {
-      if (err) throw err;
-      socket.emit('history', res);
-    })
+    col.count(function(error, count){
+      if (error) throw error;
+      col.find().skip(count - 100).sort({$_id : 1}).toArray(function (err, res) {
+        if (err) throw err;
+        socket.emit('history', res);
+      });
+    });
     
     socket.on('fullhistoryquery', function() {
       
