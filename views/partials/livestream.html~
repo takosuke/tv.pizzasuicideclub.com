@@ -13,7 +13,7 @@
                 file: "rtmp://vps59272.ovh.net/live/psctv",
                 //file: "video/pizzasuicidetvHOLD_TITLE.mp4",
                 repeat: true,
-                image: "img/placeholder02.jpg",
+                image: "img/20150117psctv-onair-placeholder.jpg",
                 autostart:true,
                 });
               </script> 

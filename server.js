@@ -29,13 +29,16 @@ app.get('/playlists', function(req, res) {
   res.render('index', { tagline : config.nextShow });
 });
 app.get('/history', function(req, res) {
-  res.render('history')
+  res.render('history', { tagline : config.nextShow })
 });
 app.get('/onair', function(req, res) {
   res.render('onAir', { tagline : config.programText });
 });
 app.get('/chat', function(req, res) {
   res.render('chatIndex');
+});
+app.get('/instructions', function(req, res) {
+  res.render('instructions');
 });
 
 app.use(express.static(__dirname + '/public'));  
