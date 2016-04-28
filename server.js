@@ -32,13 +32,17 @@ app.get('/history', function(req, res) {
   res.render('history', { tagline : config.nextShow })
 });
 app.get('/onair', function(req, res) {
-  res.render('onAir', { tagline : config.programText });
+  res.render('onAir', { tagline : config.programText, countDownTo : config.countDownTo });
 });
 app.get('/chat', function(req, res) {
   res.render('chatIndex');
 });
 app.get('/instructions', function(req, res) {
   res.render('instructions');
+});
+
+app.get('/clapprtest', function(req, res){
+  res.render('clapprtest');
 });
 
 app.use(express.static(__dirname + '/public'));  

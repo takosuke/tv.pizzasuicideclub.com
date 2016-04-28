@@ -11,12 +11,27 @@
                 width : 640,
                 height : 480,
                 file: "rtmp://vps59272.ovh.net/live/psctv",
-                //file: "video/pizzasuicidetvHOLD_TITLE.mp4",
+                //file: "images/20160115hellogoodbye-tv-poster.jpg",
                 repeat: true,
                 image: "img/placeholder02.jpg",
                 autostart:true,
                 });
               </script> 
+<!--
+              <script>
+              var player = new Clappr.Player({
+                source: 'http://185.14.185.30/live/psctv/index.m3u8',
+                parentId: "#livestream",
+                autPlay: true,
+                plugins: { playback: [Clappr.HLS] },
+                baseUrl: '/latest',
+                poster: 'images/20160115hellogoodbye-tv-poster.jpg',
+                mute: true,
+                height: 480,
+                width: 640
+              });
+              </script>
+-->
               <p>
                 <%= tagline %>
                 <a href='/playlists'>the regular show</a>
