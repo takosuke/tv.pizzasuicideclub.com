@@ -179,5 +179,8 @@ TV CHANNEL
 
 
 @media only screen and (max-width: 640px) {
+  #login-screen {
+    display:none;
+  }
 
 }

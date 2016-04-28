@@ -5,6 +5,7 @@
     "bootstrap": "latest",
     "jquery": "latest",
     "typeahead.js": "latest",
+    "clappr": "latest",
     "font-awesome": "latest"
   },
   "directory": "components",

@@ -1,0 +1,48 @@
+how to make your own tv, in 98393849839 easy steps<br>
+<br>
+hi, fellow broadcaster!So I heard you want to make your own live tv show, huh?Ok I give you the steps, from cheap and easy to hard an expensive, whether you want to do it with us or against us. <br>
+<br>
+INGREDIEntS:<br>
+<br>
+minimal requirements for streaming with us:<br>
+<br>
+-a computer, pc linux or mac doesn't matter (although linux is the hardest in this case) but needs some horsepower. I'm using a 2010 macbook with 4gb of ram and it's a bit of a challenge to keep it from stalling, but it works. Different configurations may need less power.<br>
+<br>
+-a camera. If your laptop has a webcam that's the absolute easiest. A usb cam also works, or a dv/hd camera with firewire output.  I'll discuss more advanced possibilities below. <br>
+<br>
+-a sound source, can be the camera microphone, the computer microphone or come from a mixer<br>
+<br>
+-an internet connection. Preferably ethernet cable over wireless as it's more stable. <br>
+<br>
+-a program to stream with. For windows and mac the free Flash Media Live Encoder is the easiest to setup. In Linux you can use VLC or FFMPEG, and there's some other stuff like WebcamStudio and Red5 Media Server but I haven't tried it yet. <br>
+<br>
+<br>
+<br>
+<br>
+<h1>MINIMAL SETUP (with webcam or laptop camera)</h1><br>
+<br>
+MAC:<br>
+<br>
+Install Flash Media Live Encoder<br>
+http://offers.adobe.com/en/na/leap/landings/fmle3.html<br>
+<br>
+Download PSCTV configuration file and extract it<br>
+http://www.tv.pizzasuicideclub.com/configfiles/psctv.xml.zip<br>
+<br>
+<br>
+Test your upload connection speed<br>
+http://www.speedtest.net/<br>
+this will determine the quality at which you can stream. You get better results with cable than over wifi so use that if possible. <br>
+<br>
+In Flash Media Live Encoder, go to File -> Open Profile and open the psctv.xml you downloaded<br>
+This will already set almost everything up, but you will still have to setup the input source and the quality<br>
+For webcam/internal microphone you just select them in the video and audio device selector. You should already see something in the preview window.<br>
+<br>
+The quality is setup for a fairly fast connection of about 5Mbps. If you have a more standard 2Mbps connection you can set the video bitrate to about 240Kbps and it will look kind of shit but ok. Ideally spend some time testing different bitrates and resolutions and looking at it on the website to see how it works - some resolutions seem to work better than others even .<br>
+<br>
+After setting it up press "connect" and "start" and it should already work. Check the logs to see if any errors show up - particularly, if your computer can't handle it there will be lots of "Detected gap on tape" or something like that. My computer for example doesn't like it if i touch another program while streaming and it starts doing that. That's bad news. <br>
+<br>
+If you have a strong computer you can also tick "Save to file" to record the stream. I'm gonna try and set the server so it records as well but don't know how well that will work...<br>
+<br>
+<br>
+<br>

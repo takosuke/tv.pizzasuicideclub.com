@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="onair-page">
+  <head>
+    <% include partials/head.html %>
+  </head>
+  <body>
+
+    
+
+    <div id="main-wrapper">
+      <% include partials/header.html %>
+      <% include partials/livestream.html %>
+      <% include partials/login.html %>
+      <% include partials/chat.html %>
+    </div><!-- main-wrapper -->
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/timbre.dev.js"></script>
+  <script src="/socket.io/socket.io.js"></script>  
+  <script src="js/chatclient.js"></script>
+  <script src="js/jquery.countdown.js"></script>
+  <script>
+    $("#clock").countDown();
+  </script>
+ 
+  </body>
+</html>
