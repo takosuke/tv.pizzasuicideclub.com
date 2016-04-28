@@ -35,3 +35,6 @@ bower_components
 
 # OSX STUFF
 .DS_Store
+
+# Ansible local stuff
+devops/hosts
