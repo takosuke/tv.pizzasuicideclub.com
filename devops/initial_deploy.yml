@@ -15,5 +15,6 @@
   - clone_repo
   - log_setup
   - nginx_setup
-  - pm2_setup
+  - mongodb_setup
   - build_dependencies
+  - pm2_setup

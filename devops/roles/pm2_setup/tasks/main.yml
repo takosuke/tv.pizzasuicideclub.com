@@ -5,5 +5,7 @@
   notify: restart pm2
 
 - name: start app
-  command: "{{ webapps_dir }}/{{ app_name }}/html/server.js"
+  command: pm2 start {{ webapps_dir }}/{{ app_name }}/html/server.js
+#  become: true
+#  become_user: takosuke
 
