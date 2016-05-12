@@ -1,6 +1,6 @@
 ---
 
 - name: update app repo
-  git: repo=https://github.com/{{ repo_path }} dest={{ webapps_dir }}/{{ app_name }}
+  git: repo=https://github.com/{{ repo_path }} dest={{ webapps_dir }}/{{ app_name }} force=yes
   become: yes
   become_user: takosuke
