@@ -21,9 +21,9 @@ app.set('port', process.env.OPENSHIFT_NODEJS_PORT || config.port);
 app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.get('/', function(req, res) {
   if (config.onAir == true) {
-    res.render('onAir', { tagline : config.programText });
+    res.render('onAir', { tagline : config.programText, countDownTo: config.countDownTo });
   } else {
-    res.render('index', { tagline : config.nextShow });
+    res.render('index', { tagline : config.nextShow , countDownTo: config.countDownTo });
   }
 });
 app.get('/playlists', function(req, res) {
