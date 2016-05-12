@@ -1,0 +1,9 @@
+---
+
+# TODO change it for lineinfile so that old stuff doesn't have to get changed if not necessary
+- name: update config with new info
+  template: src=templates/config.js dest={{ webapps_dir }}/{{ app_name }}/html/config.js
+
+- name: restart app
+  command: pm2 restart {{ webapps_dir }}/{{ app_name }}/html/server.js
+

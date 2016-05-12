@@ -1,9 +1,9 @@
 var config = {};
 
-config.onAir = true
+config.onAir = {{ onair }}
 config.port = 8000;
-config.programText = "THE HANgoVER SHOW COMING UP!";
-config.nextShow = "FIRST SHOW OF THE YEAR";
-config.countDownTo = "2016-01-15T21:00:00+0000"
+config.programText = "{{ tagline }}";
+config.nextShow = "{{ next_show }}";
+config.countDownTo = "{{ date }}T{{ time }}:00+0000"
 
 module.exports = config;

@@ -14,3 +14,19 @@
 
 - name: install mongodb
   apt: name=mongodb-org state=installed
+
+- name: ensure mongodb backup directory
+  file: dest=/home/takosuke/backups/{{ app_name }}/{{ ansible_date_time.date }}/chat state=directory owner=takosuke group=takosuke
+
+- name: copy mongodb chat backups
+  copy: src={{ item }} 
+        dest=/home/takosuke/backups/{{ app_name }}/{{ ansible_date_time.date }}/{{ item }}
+        owner=takosuke
+        group=takosuke
+  with_items:
+      - chat/ChatHistory.bson
+      - chat/ChatHistory.metadata.json
+      - chat/system.indexes.bson
+
+- name: restore mongodb chat backups
+  command: mongorestore --db chat --drop /home/takosuke/backups/{{ app_name }}/{{ ansible_date_time.date }}/chat

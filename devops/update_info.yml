@@ -1,28 +1,26 @@
-- name: Upgrade to last update in remote repo and update show tag line and time
+- name: update show tag line and time
   hosts: webservers
   remote_user: takosuke
   vars:
   - app_name: tv.pizzasuicideclub.com
-  - virtualenv_dir: "/home/deploy/webapps/kyburz-ecodriving/env"
-  - repo_path: "takosuke/tv.pizzasuicideclub.com"
-  - repo_remote : origin
-  - repo_version: master
-  - app_dir: "/home/takosuke/public_html/tv.pizzasuicideclub.com"
-  - postgresql_dbname: "kyburz_ecodriving"
-  - postgresql_username: "kyburz_admin"
+  - webapps_dir: "/home/takosuke/public_html"
 
   vars_prompt:
   - name: "onair"
     prompt: "Is the show on air?(true/false)"
-    default: false
+    default: "false"
+    private: no
   - name: "tagline"
     prompt: "Insert a tagline for the current show"
+    private: no
   - name: "next_show"
     prompt: "Insert a tagline for the next show"
+    private: no
   - name: "date"
     prompt: "Insert a date for the next show (format YYYY-MM-DD)"
+    private: no
   - name: "time"
     prompt: "Insert a time for the next show (format HH:MM)"
+    private: no
   roles:
   - update_information
-  - update_repo
