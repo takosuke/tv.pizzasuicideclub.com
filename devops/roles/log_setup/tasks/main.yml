@@ -1,0 +1,4 @@
+---
+
+- name: ensure log directory exists
+  file: dest={{ webapps_dir }}/{{ app_name }}/log state=directory owner=takosuke

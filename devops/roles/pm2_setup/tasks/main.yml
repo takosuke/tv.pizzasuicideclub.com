@@ -2,5 +2,8 @@
 
 - name: install pm2
   npm: name=pm2 global=yes
-#  become_method: sudo
+  notify: restart pm2
+
+- name: start app
+  command: "{{ webapps_dir }}/{{ app_name }}/html/server.js"
 
