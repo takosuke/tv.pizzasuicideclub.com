@@ -13,6 +13,12 @@
 
   vars_prompt:
   - name: "tagline"
+    prompt: "Insert a tagline for the current show"
+  - name: "next_show"
     prompt: "Insert a tagline for the next show"
+  - name: "date"
+    prompt: "Insert a date for the next show (format YYYY-MM-DD)"
+  - name: "time"
+    prompt: "Insert a time for the next show (format HH:MM)"
   roles:
   - server_setup

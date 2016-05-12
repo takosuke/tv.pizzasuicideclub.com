@@ -1,0 +1,6 @@
+---
+
+- name: install pm2
+  npm: name=pm2 global=yes
+#  become_method: sudo
+

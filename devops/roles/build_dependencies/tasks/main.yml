@@ -1,0 +1,10 @@
+---
+
+- name: Install packages based on package.json
+  npm: path={{ webapps_dir }}/{{ app_name }}/html
+
+- name: Install bower globally
+  npm: name=bower global=yes
+
+- name: Install packages based on bower.json.
+  bower: path={{ webapps_dir }}/{{ app_name }}/html
