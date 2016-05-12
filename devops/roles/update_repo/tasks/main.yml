@@ -1,6 +1,9 @@
 ---
 
 - name: update app repo
-  git: repo=https://github.com/{{ repo_path }} dest={{ webapps_dir }}/{{ app_name }} force=yes
+  git: repo=https://github.com/{{ repo_path }} dest={{ webapps_dir }}/{{ app_name }} 
   become: yes
   become_user: takosuke
+
+- name: restart app
+  command: pm2 restart {{ webapps_dir }}/{{ app_name }}/html/server.js
