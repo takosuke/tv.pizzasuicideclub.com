@@ -1,9 +1,0 @@
-      <header class="clearfix">
-        <h1>
-          PIZZA SUICIDE TV
-        </h1>
-              <div class="countdown">
-                 <%= tagline %><br>
-                 <span id="clock">2015-02-22T20:00:00+0000</span>
-              </div>
-      </header>
