@@ -3,17 +3,12 @@
   "version": "0.0.1",
   "description": "The Pizza Suicide Chat",
   "dependencies": {
-    "express": "~4.10.6",
-    "socket.io": "~1.2.1",
-    "underscore": "~1.7.0",
-    "chai": "^1.10.0",
-    "poop" : "^2.1.18",
-    "bower" : "~1.7.9",
-    "ejs" : "latest"
-  },
-  "devDependencies": {
-    "chai": "~1.9.2",
-    "mocha": "~2.0.1"
+    "bower": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "mongodb": "^2.1.18",
+    "socket.io": "latest",
+    "underscore": "latest"
   },
   "main": "server.js",
   "directories": {
@@ -21,7 +16,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
     "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node server.js"
   },
