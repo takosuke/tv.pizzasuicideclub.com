@@ -1,5 +1,0 @@
----
-
-- name: restart pm2 app
-  service: name=nginx state=restarted
-

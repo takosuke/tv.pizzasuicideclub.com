@@ -2,8 +2,5 @@
 
 - name: update app repo
   git: repo=https://github.com/{{ repo_path }} dest={{ webapps_dir }}/{{ app_name }} 
-  become: yes
-  become_user: takosuke
+  notify: restart pm2 app
 
-- name: restart app
-  command: pm2 restart {{ webapps_dir }}/{{ app_name }}/html/server.js

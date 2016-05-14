@@ -2,31 +2,45 @@
 
 - name: add mongodb key
   apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=7F0CEB10
+  become: yes
+  become_method: sudo
+
 
 - name: create list file for mongo db
   lineinfile: dest=/etc/apt/sources.list.d/mongodb-org-3.0.list
               line="deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse"
               state=present 
               create=yes
+  become: yes
+  become_method: sudo
 
 - name: update apt repository
   apt: update_cache=yes
+  become: yes
+  become_method: sudo
 
 - name: install mongodb
   apt: name=mongodb-org state=installed
+  become: yes
+  become_method: sudo
 
 - name: ensure mongodb backup directory
-  file: dest=/home/takosuke/backups/{{ app_name }}/{{ ansible_date_time.date }}/chat state=directory owner=takosuke group=takosuke
+  file: dest=/home/{{ deploy_user }}/backups/{{ app_name }}/{{ ansible_date_time.date }}/chat
+        state=directory
+        owner={{ deploy_user }}
+        group={{ deploy_user }}
 
 - name: copy mongodb chat backups
   copy: src={{ item }} 
-        dest=/home/takosuke/backups/{{ app_name }}/{{ ansible_date_time.date }}/{{ item }}
-        owner=takosuke
-        group=takosuke
+        dest=/home/{{ deploy_user }}/backups/{{ app_name }}/{{ ansible_date_time.date }}/{{ item }}
+        owner={{ deploy_user }}
+        group={{ deploy_user }}
   with_items:
       - chat/ChatHistory.bson
       - chat/ChatHistory.metadata.json
       - chat/system.indexes.bson
 
 - name: restore mongodb chat backups
-  command: mongorestore --db chat --drop /home/takosuke/backups/{{ app_name }}/{{ ansible_date_time.date }}/chat
+  command: mongorestore --db chat --drop /home/{{ deploy_user }}/backups/{{ app_name }}/{{ ansible_date_time.date }}/chat
+  become: yes
+  become_method: sudo

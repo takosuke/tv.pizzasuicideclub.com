@@ -1,0 +1,7 @@
+---
+
+- name: restart pm2 app
+  command: pm2 restart {{ webapps_dir }}/{{ app_name }}/html/server.js
+
+- name: restart nginx
+  service: name=nginx state=restarted

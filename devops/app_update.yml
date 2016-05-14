@@ -3,6 +3,7 @@
   remote_user: takosuke
   vars:
   - app_name: tv.pizzasuicideclub.com
+  - deploy_user: takosuke
   - repo_path: "takosuke/tv.pizzasuicideclub.com"
   - repo_remote : origin
   - repo_version: master

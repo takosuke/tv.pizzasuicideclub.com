@@ -1,9 +1,9 @@
 - name: Initial deployment of tv.pizzasuicideclub.com
   hosts: webservers
   remote_user: takosuke
-  become: true
   vars:
   - app_name: tv.pizzasuicideclub.com
+  - deploy_user: takosuke
   - domain_name: tv.pizzasuicideclub.com
   - repo_path: "takosuke/tv.pizzasuicideclub.com"
   - repo_remote : origin

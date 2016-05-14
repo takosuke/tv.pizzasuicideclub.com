@@ -2,14 +2,17 @@
 
 - name: write nginx configuration
   template: src=templates/{{ domain_name }} dest=/etc/nginx/sites-available/{{ domain_name }}
+  become: yes
   become_method: sudo
 
 - name: disable default nginx virtual host
   file: path=/etc/nginx/sites-enabled/default state=absent
   notify: restart nginx
+  become: yes
   become_method: sudo
 
 - name: symlink kyburz configuration to sites-enabled
   file: src=/etc/nginx/sites-available/{{ domain_name }} dest=/etc/nginx/sites-enabled/{{ domain_name }} state=link
   notify: restart nginx
+  become: yes
   become_method: sudo
