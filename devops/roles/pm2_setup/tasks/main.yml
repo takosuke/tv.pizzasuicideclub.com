@@ -2,14 +2,15 @@
 
 - name: install pm2
   npm: name=pm2 global=yes
-  notify: restart pm2
+#  notify: restart pm2
   become: yes
   become_method: sudo
 
 - name: start app
-  command: pm2 restart {{ webapps_dir }}/{{ app_name }}/html/server.js
+  command: pm2 start server.js chdir={{ webapps_dir }}/{{ app_name }}/html/
+  ignore_errors: yes
 
 - name: make pm2 startup on boot
-  command: pm2 startup
+  command: pm2 startup - {{ deploy_user }}
   become: yes
   become_method: sudo
