@@ -11,6 +11,7 @@
   ignore_errors: yes
 
 - name: make pm2 startup on boot
-  command: pm2 startup - {{ deploy_user }}
+  command: pm2 startup -u {{ deploy_user }} -hp {{ webapps_dir }}/{{ app_name }}/html/
   become: yes
   become_method: sudo
+  notify: reboot system
